@@ -1,5 +1,5 @@
-# Gatsby.js blog pulling data from Notion.so via Python client
-This is a separately maintained version of the code by @ArnaudValensi
+# Gatsby.js blog pulling data from Notion.so via Python
+This is a separately maintained repository based on the works of @ArnaudValensi and @tfaieta
 
 See the original readme below.
 
@@ -7,6 +7,7 @@ See the original readme below.
 - Renamed variables to follow Python `snake_case` convention
 - Enabled support for Unicode languages (tested with Vietnamese)
 - Added `virtualenv` for easy development with PyCharm
+- Removed `pipenv` support because Github Actions itself already runs in a virtual environment, so it's not needed; and with `pipenv`, I experienced errors related to image processing. Therefore, the deployment workflow uses pure `python` command.
 
 ## Steps to setup local dev environment
 1. Install Node.js >= 14.15.3
