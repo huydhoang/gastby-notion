@@ -135,11 +135,12 @@ def to_markdown(page_id, ignore):
 
 
 if __name__ == "__main__":
-    print(f'-> Cleaning the "{dest_path}" folder')
+    print(f'-> Cleaning directory "{dest_path}" if exists')
     try:
         shutil.rmtree(dest_path)
-    except shutil.Error as err:
+    except FileNotFoundError as err:
         print(err)
+        print(f'-> Creating new directory "{dest_path}"')
         pass
     os.mkdir(dest_path)
 
