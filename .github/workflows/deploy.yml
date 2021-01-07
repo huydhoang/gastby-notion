@@ -33,6 +33,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
         run: |
+          pip install notion
           yarn
           yarn import-notion-posts
           yarn build
